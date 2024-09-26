@@ -55,6 +55,8 @@ http://poc-1261106563.us-east-1.elb.amazonaws.com/?app=poc
 
 ## Proposed Architecture
 
+The primary goal of the proposed architecture is to provide a solution that is simple and clean, but at the same time secure, reliable and easily maintainable.
+
 * ALB used to direct traffic and distribute traffic across replicas
 * Web Application Firewall used to block common attacks found in the OWASP Top 10, with ability to add further rules.
 * Private subnets added to avoid exposing application directly to the internet
