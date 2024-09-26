@@ -26,7 +26,7 @@ terraform apply
 ```
 After a successful apply, contained within the output should be a URL from the loadbalancer with which you can then access the web application. In order to hit the application you would need to provide the appropriate query parameter such as `?app=poc` or `?app=jam`.
 
-This is used as a workaround for the lack of a DNS hosted zone within Route 53 to allow for subdomains.
+> [!WARNING] This is used as a workaround for the lack of a DNS hosted zone within Route 53 to allow for subdomains.
 
 As an example you would access one of the applications using:
 
@@ -56,6 +56,7 @@ http://poc-1261106563.us-east-1.elb.amazonaws.com/?app=poc
 * ALB used to direct traffic and distribute traffic across replicas
 * Web Application Firewall used to block common attacks found in the OWASP Top 10, with ability to add further rules.
 * Private subnets added to avoid exposing application directly to the internet
+* A NAT gateway has been deployed per public subnet for greater resiliency
 * Increased the number of Availability Zones to three for greater resiliency
 * Application is deployed in a scratch docker image to significantly reduce attack surface and image size
 * Image is scanned within ECR to detect possible vulnerabilities
