@@ -46,6 +46,7 @@ http://poc-1261106563.us-east-1.elb.amazonaws.com/?app=poc
 
 ## NOTES
 
+* A remote state has been setup, but as sandboxes are temporary, it obviously cannot be relied upon so has been commented out [here](https://github.com/calxus/aws-tech-test/blob/a62176326842ef29d58c3f2df607096ec2d1af3d/infra/terraform.tf#L3-L10)
 * Due to time constraints and sandbox limitations only one environment has been setup
 * A CI/CD pipeline will need to be setup to deploy the infrastructure across the environments
 * Fargate has been chosen as the platform to host the applications. The reason for this choice is that it provides a good general solution. However, depending on usage and complexity of networking between services, lambda functions or EKS may provide a better platform for some or all of the services.
