@@ -26,7 +26,8 @@ terraform apply
 ```
 After a successful apply, contained within the output should be a URL from the loadbalancer with which you can then access the web application. In order to hit the application you would need to provide the appropriate query parameter such as `?app=poc` or `?app=jam`.
 
-> [!IMPORTANT] This is used as a workaround for the lack of a DNS hosted zone within Route 53 to allow for subdomains.
+> [!IMPORTANT]
+> This is used as a workaround for the lack of a DNS hosted zone within Route 53 to allow for subdomains.
 
 As an example you would access one of the applications using:
 
